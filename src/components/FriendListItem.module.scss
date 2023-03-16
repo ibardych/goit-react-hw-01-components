@@ -1,0 +1,100 @@
+@import './../sass/utils.scss';
+
+.item {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px -1px rgb(0 0 0 / 0.1);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 20px;
+  cursor: pointer;
+  @include transition(transform, border-radius);
+
+  &:hover {
+    transform: scale(1.01);
+    border-radius: 100%;
+  }
+
+  &:hover .status {
+    animation: pulse 2s infinite;
+  }
+
+  &:hover img {
+    transform: rotate(-10deg) scale(2.1) translateX(10px);
+  }
+
+  &:hover p {
+    font-size: 30px;
+    font-weight: 300;
+    transform: translateX(30px);
+  }
+
+  & img {
+    @include transition(transform);
+  }
+
+  & .status {
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+    position: relative;
+    animation-play-state: paused;
+  }
+
+  & p {
+    font-size: 20px;
+    color: #456a7d;
+    @include transition(font-size, transform, font-weight);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.5);
+    opacity: 0.5;
+  }
+  20% {
+    transform: scale(1) rotate(-15deg);
+    opacity: 1;
+    border-radius: 6px;
+  }
+  40% {
+    transform: scale(1.25) rotate(15deg);
+    opacity: 0.75;
+  }
+  60% {
+    transform: scale(0.75) rotate(0deg);
+    opacity: 0.5;
+  }
+  80% {
+    transform: scale(1) rotate(15deg);
+    opacity: 0.75;
+  }
+  100% {
+    transform: scale(0.5) rotate(-15deg);
+    opacity: 0.5;
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(0, 0);
+  }
+  20% {
+    transform: translate(-10px, 0);
+  }
+  40% {
+    transform: translate(10px, 0);
+  }
+  60% {
+    transform: translate(-10px, 0);
+  }
+  80% {
+    transform: translate(10px, 0);
+  }
+  100% {
+    transform: translate(0px, 0);
+  }
+}

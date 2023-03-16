@@ -1,0 +1,88 @@
+@import './../sass/utils.scss';
+
+.profile {
+  width: 300px;
+  max-width: 100%;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px -1px rgb(0 0 0 / 0.1);
+  text-align: center;
+  overflow: hidden;
+
+  & .description {
+    margin-bottom: 30px;
+    padding-top: 30px;
+  }
+
+  & .avatar-wrapper {
+    border-radius: 500px;
+    overflow: hidden;
+    width: 160px;
+    max-width: 100%;
+    margin: 0 auto;
+    background-color: yellowgreen;
+    margin-bottom: 30px;
+    @include transition(transform);
+  }
+
+  &:hover .avatar-wrapper {
+    transform: scale(1.1);
+  }
+
+  & .avatar {
+    display: block;
+    width: 100%;
+  }
+
+  & .name {
+    margin-bottom: 20px;
+  }
+
+  & .tag {
+    display: inline-block;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #999;
+    @include transition(opacity);
+
+    &:hover,
+    &:focus {
+      opacity: 0.8;
+    }
+  }
+
+  & .location {
+    font-size: 14px;
+    color: #999;
+  }
+
+  & .stats {
+    background-color: #f3f7f9;
+    display: flex;
+    border-top: 1px solid #d5d8da;
+
+    & li {
+      width: 33.33%;
+      padding: 20px 5px;
+      border-right: 1px solid #d5d8da;
+
+      &:last-child {
+        border-right: none;
+      }
+    }
+
+    & .label {
+      display: block;
+      color: #999;
+      font-size: 14px;
+      font-weight: 400;
+      margin-bottom: 7px;
+    }
+
+    & .quantity {
+      font-size: 18px;
+      font-weight: 600;
+    }
+  }
+}

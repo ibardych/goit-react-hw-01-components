@@ -1,0 +1,77 @@
+@import './../sass/utils.scss';
+
+.statistics {
+  width: 500px;
+  max-width: 100%;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px -1px rgb(0 0 0 / 0.1);
+  text-align: center;
+  overflow: hidden;
+
+  & .title {
+    font-size: 32px;
+    text-transform: uppercase;
+    color: #456a7d;
+    font-weight: 300;
+    padding: 40px 0 0 0;
+    margin-bottom: 40px;
+  }
+
+  & .statlist {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    color: #fff;
+
+    & .item {
+      flex-basis: 25%;
+      flex-grow: 0;
+      flex-shrink: 0;
+      padding: 20px;
+      opacity: 0.8;
+      cursor: pointer;
+      @include transition(opacity);
+
+      &:hover,
+      &:focus {
+        opacity: 1;
+      }
+
+      &:hover .percentage {
+        transform: scale(1.2);
+      }
+
+      & .label {
+        display: block;
+        font-size: 16px;
+        font-weight: 300;
+        margin-bottom: 15px;
+      }
+
+      & .percentage {
+        display: block;
+        font-size: 32px;
+        font-weight: 200;
+        @include transition(transform);
+      }
+
+      &:nth-child(1) {
+        background-color: #4dc6f3;
+      }
+      &:nth-child(2) {
+        background-color: #a43cf3;
+      }
+      &:nth-child(3) {
+        background-color: #e64c66;
+      }
+      &:nth-child(4) {
+        background-color: #1eb9c4;
+      }
+      &:nth-child(5) {
+        background-color: #c41eb1;
+      }
+    }
+  }
+}
