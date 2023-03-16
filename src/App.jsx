@@ -2,10 +2,10 @@ import user from 'data/user';
 import statistics from 'data/statistics';
 import friends from 'data/friends';
 import transactions from 'data/transactions';
-import Profile from 'components/Profile';
-import Statistics from 'components/Statistics';
-import FriendList from 'components/FriendList';
-import TransactionHistory from 'components/TransactionHistory';
+import Profile from 'components/Profile/Profile';
+import Statistics from 'components/Statistics/Statistics';
+import FriendList from 'components/FriendList/FriendList';
+import TransactionHistory from 'components/TransactionHistory/TransactionHistory';
 import style from './App.module.scss';
 
 export const App = () => {
